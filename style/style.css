@@ -1,0 +1,647 @@
+/* Search bar  */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 20rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  border: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+::placeholder {
+  color: #a1a1a1;
+}
+
+/* hide the placeholder text on focus */
+:focus::placeholder {
+  /* text-indent: -999px; */
+  color: white;
+}
+
+.searchInput:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.searchInputIcon {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.5rem;
+  color: #a1a1a1;
+  transition: all 0.1s ease-in-out;
+}
+
+.search-container:focus-within > .searchInputWrapper > .searchInputIcon {
+  right: 0.2rem;
+}
+
+.navbar-position {
+  justify-content: space-around;
+}
+
+/* search bar icons */
+.icons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: white;
+}
+
+.icon i {
+  font-size: 24px; /* Set the desired icon size */
+  cursor: pointer;
+}
+
+/* Activity Panel  */
+.sec-container {
+  padding: 0 6% 0 6%;
+}
+/* 
+.left-container,
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.activity-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.activity-card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.activity-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.activity-card li {
+  margin-bottom: 8px;
+}
+
+.like-icon {
+  color: #3578e5;
+  margin-right: 5px;
+}
+
+.head-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-div a {
+  text-decoration: none;
+  color: gray;
+}
+
+.story-div img,
+.story-sec-div img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.story-div {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.story-sec-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.story-text-div {
+  font-size: 13px;
+}
+
+.new-word {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.sec-icon-div {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background-color: lightgray;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  aspect-ratio: 1/1;
+}
+
+/* Story Panel */
+.story-panel {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #ffdde1, #c1e1ff);
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10px;
+}
+
+.story img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 2px solid #bd1528;
+  padding: 3px;
+}
+
+.story-username {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.plus-icon {
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translateX(50%);
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plus-icon i {
+  color: #476fe6;
+}
+
+.circle {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  text-align: center; /* Center the name */
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    outline: 2px solid #bd1528;
+    padding: 3px;
+  }
+}
+
+.name {
+  position: absolute;
+  bottom: -15px; /* Adjust as needed to position the name properly */
+  left: 0;
+  width: 100%; /* Ensure the name spans the full width of the circle */
+  font-size: 14px;
+  color: #333; /* Adjust color as needed */
+}
+
+/* Instagram Feed */
+
+.feed {
+  height: auto;
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.feed .username {
+  padding: 10px 30px 0px 30px;
+  display: flex;
+  flex-flow: row;
+}
+
+.feed .username .image,
+.feed .username .image img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.feed .username a {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.feed .username .id {
+  margin: 10px 15px;
+}
+
+.feed .post {
+  width: 100%;
+  height: 300px;
+  margin: 10px 0px;
+}
+
+.feed .post img {
+  width: 100%;
+  height: inherit;
+}
+
+.feed .btn-group {
+  padding: 0px 10px;
+}
+
+.feed .btn-group button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.feed .btn-group .btn-bookmark {
+  float: right;
+}
+
+.feed .caption {
+  font-size: 13px;
+  padding: 0px 20px;
+}
+
+.feed .caption .like {
+  font-weight: bold;
+}
+
+.feed .caption .id {
+  color: #000000;
+  text-decoration: none;
+}
+
+.feed .caption .time {
+  font-size: 10px;
+  color: #999;
+}
+
+/* Message Section  */
+
+.messageSearch {
+  width: 100%;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  transition: transform 0.1s ease-in-out;
+}
+
+.button-col {
+  display: flex;
+}
+
+.message-button-div {
+  margin-top: 20px;
+}
+
+.message-button {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.message-button-div a {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.border-gray {
+  border-top: 2px solid #ccc;
+}
+
+#all-data {
+  height: 450px;
+  overflow-y: scroll;
+}
+#all-data::-webkit-scrollbar {
+  display: none;
+}
+
+.last-online-div {
+  overflow-y: scroll;
+  height: 497px;
+}
+
+.last-online-div::-webkit-scrollbar {
+  display: none;
+}
+
+.last-online-div img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.datainfo {
+  display: flex;
+  gap: 10px;
+}
+.last-text-div {
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.req-col {
+  justify-content: flex-end;
+  display: flex;
+}
+
+/* Comment Card  */
+
+.edit-comment-btn,
+.delete-comment-btn {
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s;
+  color: #0d6efd;
+}
+
+.edit-comment-btn:hover,
+.delete-comment-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 1045px) {
+  .messageSearch::placeholder {
+    font-size: 12px;
+  }
+  .searchInputIcon {
+    font-size: 14px;
+    top: 0.65rem;
+  }
+  .sec-container {
+    padding: 0 3% 0 3%;
+  }
+}
+
+@media only screen and (max-width: 943px) {
+  .activity-card h2 {
+    font-size: 14px;
+  }
+  .head-div a {
+    font-size: 11px;
+  }
+  .fa-pen-to-square {
+    font-size: 16px !important;
+  }
+  .icon i {
+    font-size: 20px;
+  }
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+  .nav-item img {
+    width: 90px !important;
+  }
+  .searchInput {
+    width: 18rem;
+    height: 1.8rem;
+  }
+  .story img {
+    width: 68px;
+    height: 68px;
+  }
+  .circle img {
+    width: 65px;
+  }
+  .story {
+    margin-top: 13px;
+  }
+  .plus-icon i {
+    font-size: 13px;
+  }
+  .plus-icon {
+    top: 45px;
+    padding: 3px;
+  }
+  .story-panel span {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .head-div h6 {
+    font-size: 14px;
+  }
+  .story-text-div h6 {
+    font-size: 14px;
+  }
+  .story-text-div p {
+    font-size: 12px;
+  }
+  .story-div img,
+  .story-sec-div img {
+    height: 45px;
+    width: 45px;
+  }
+  .sec-icon-div i {
+    font-size: 13px;
+  }
+  .sec-icon-div {
+    width: 35px;
+    height: 35px;
+  }
+  .last-online-div img {
+    height: 45px;
+    width: 45px;
+  }
+  .last-text-div p {
+    font-size: 12px;
+  }
+  .message-button-div a {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 844px) {
+  .sec-container {
+    padding: 0 1.5% 0 1.5%;
+  }
+  .activity-card {
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .left-mob-col {
+    display: none;
+  }
+  .mid-mob-col {
+    width: 66.67%;
+    padding-right: 0;
+  }
+  .last-mob-col {
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 602px) {
+  .story img {
+    width: 60px;
+    height: 60px;
+  }
+  .plus-icon {
+    top: 45px;
+    padding: 2px;
+  }
+  .plus-icon i {
+    font-size: 11px;
+  }
+  .circle img {
+    width: 60px;
+  }
+  .story-panel span {
+    padding-top: 7px;
+  }
+  .last-online-div img {
+    height: 40px;
+    width: 40px;
+  }
+  .message-button {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .last-mob-col {
+    display: none;
+  }
+  .mid-mob-col {
+    width: 98%;
+    padding-right: 10px;
+  }
+  .sec-container .row {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 443px) {
+  .mid-mob-col {
+    padding-right: 0;
+  }
+  .story-panel {
+    overflow-x: scroll;
+  }
+  .circle {
+    flex-shrink: 0;
+  }
+  .story-panel::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Comments */
+
+.heading {
+  color: #666666;
+  text-align: center;
+}
+
+.comments-container {
+  width: 98%;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.button-group {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.counter {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+.posts {
+  clear: both;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  text-align: left;
+}
+.posts li {
+  background-color: #fff;
+  border: 1.5px solid #d8d8d8;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
+  box-shadow: 8px 8px 5px #888888;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.form-control {
+  height: 60px;
+}
+
+.modal-dialog {
+  max-width: 100%;
+}
